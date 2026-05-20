@@ -149,11 +149,14 @@ app.post("/verify-otp", (req, res) => {
  * Default API
  */
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
 
-    res.send("OTP Server Running");
+    res.status(200).json({
+
+        success: true,
+        message: "Server Alive"
+    });
 });
-
 /*
  * PORT
  */
